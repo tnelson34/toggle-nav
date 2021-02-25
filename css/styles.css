@@ -1,0 +1,118 @@
+/* MOBILE FIRST CSS */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	background-color: #317393;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header {
+	background-color: #fff;
+	padding: 2%;
+}
+
+header a {
+	color: #3f3f3f;
+	text-decoration: none;
+	display: block;
+}
+
+.menu a:hover,
+.menu a:active {
+	background-color: gainsboro;
+	border-radius: 4px;
+}
+
+.toggle-btn {
+	border: none;
+	background-color: #fff;
+	outline: none;
+}
+
+.toggle-btn:hover {
+	cursor: pointer;
+}
+
+svg rect { 
+	fill: #3f3f3f;
+}
+
+.menu li {
+	line-height: 4rem;
+	text-align: center;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+}
+
+header nav {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.7s ease-in-out;
+}
+
+.show-nav {
+	max-height: 12.5rem;
+}
+
+section {
+	padding: 3rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+section h2 {
+	color: #d5e294;
+	font-size: 3rem;
+	border-bottom: 2px solid #d5e294;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+}
+
+section p {
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 550px) {
+
+	.toggle-btn {
+		display: none;
+	}
+	header nav {
+		max-height: 12.5rem;
+		overflow: visible;
+	}
+
+	.menu,
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.menu li  {
+		margin-left: 0.5rem;
+	}
+
+	.menu li a {
+		padding: 0 0.5rem;
+	}
+
+}
+
+footer {
+	color: #fff;
+	text-align: center;
+	line-height: 3;
+}
